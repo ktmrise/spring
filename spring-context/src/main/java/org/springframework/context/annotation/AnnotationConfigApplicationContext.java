@@ -89,6 +89,7 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
 	 */
 	public AnnotationConfigApplicationContext(Class<?>... componentClasses) {
 		this();
+		//把配置类变成beanDefinition,put进bdmp
 		register(componentClasses);
 		refresh();
 	}

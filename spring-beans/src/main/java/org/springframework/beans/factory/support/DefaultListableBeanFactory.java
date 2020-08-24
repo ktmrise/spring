@@ -988,7 +988,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 						"Validation of bean definition failed", ex);
 			}
 		}
-
+		//先根据beanName去bdmp里取bd，如果存在且不允许覆盖，则报错,存在且允许覆盖则put进bdmp,不存在也put进bdmp
 		BeanDefinition existingDefinition = this.beanDefinitionMap.get(beanName);
 		if (existingDefinition != null) {
 			if (!isAllowBeanDefinitionOverriding()) {
