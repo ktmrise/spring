@@ -2,6 +2,8 @@ package com.ktm;
 
 import com.ktm.test.CustomBean;
 import com.ktm.test.Fu;
+import com.ktm.test.Zi;
+import com.ktm.util.MyFactoryBean;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
@@ -10,7 +12,7 @@ public class Test {
 	public static void main(String[] args)  {
 		AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
-		CustomBean cb = (CustomBean) ac.getBean("cb");
-		cb.test();
+		Zi zi = (Zi) ac.getBean("com.ktm.test.Zi");
+		System.out.println(zi);
 	}
 }
